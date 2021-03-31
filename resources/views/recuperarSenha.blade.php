@@ -9,16 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
     <style>
-    <body>
-    {
+    body{
         font-family: 'Blinker', sans-serif;
+        background-color: #006400;
+        color: #F0F8FF;
     }
+    header{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
+
+<header> 
+   <div class="container">
+        
+      <div class="row">
+        <div class="col-md-5 mt-2">
+        <h1>Sistema de Saúde</h1>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
+        </div>
+        <div class="col-md-3">
+
+           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
+        </div>
+      </div>
+
+   </div>
+   </header>
+
 <body>
     <div class="container">
 
-    <h1>Recupere sua senha</h1>
+    <center><h1>Recupere sua senha</h1></center>
 
     <div class="row">
     <form method="POST" action="{{ route('carregarRecuperação') }}">
@@ -28,7 +58,7 @@
          <input type="text" class="form-control" id="emailr" name="emailr">
         </div>
         <div class="row">
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <button type="submit" class="btn btn-success">Enviar</button>
         </div>
        </form>
        </div>

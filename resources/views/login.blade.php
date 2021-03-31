@@ -9,14 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
     <style>
-    <body>
-    {
+    body{
         font-family: 'Blinker', sans-serif;
+        background-color: #006400;
+        color: #F0F8FF;
     }
+    header{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
+
+<header> 
+   <div class="container">
+        
+      <div class="row">
+        <div class="col-md-5 mt-2">
+        <h1>Sistema de Saúde</h1>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
+        </div>
+        <div class="col-md-3">
+
+           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
+        </div>
+      </div>
+
+   </div>
+   </header>
+
 <body>
-    <div class="container">
+
+     <div class="container">
       
     <div class="row">
       
@@ -34,18 +65,19 @@
          <input type="password" class="form-control" id="senha" name="senha">
         </div>
         <div class="row">
-          <button type="submit" class="btn btn-primary">Entrar</button>
+          <button type="submit" class="btn btn-success">Entrar</button>
         </div>
        </form>
        <div class="row mt-2">
 
-          <a  href="{{ route('carregarRecuperação') }}" class="btn btn-primary">Esqueci minha senha</a>
+          <a  href="{{ route('carregarRecuperação') }}" class="btn btn-success">Esqueci minha senha</a>
        </div>
        <div class="row mt-2">
-       <a  href="{{ route('carregarCadastro') }}" class="btn btn-primary">Não possui uma conta? Cadastre-se</a>
+       <a  href="{{ route('carregarCadastro') }}" class="btn btn-success">Não possui uma conta? Cadastre-se</a>
        </div>
     </div>
     
     </div>
 </body>
+
 </html>

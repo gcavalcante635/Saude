@@ -9,33 +9,51 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
     <style>
-    <body>
-    {
+    body{
         font-family: 'Blinker', sans-serif;
-    }
+        background-color: #006400;
+        color: #F0F8FF;
+      }
+      header{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
-<body>
+
+   <header> 
    <div class="container">
         
-      <div class="row">
-        <div class="col">
+      <div class="row ">
+        <div class="col-md-5 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
-        <div class="col">
+        <div class="col-md-2">
 
-           <a  href="{{ route('carregarSobre') }}" class="btn btn-primary"><h1>Sobre</h1></a>
+           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
         </div>
-        <div class="col">
+        <div class="col-md-2">
 
-           <a  href="{{ route('carregarLogin') }}" class="btn btn-primary"><h1>Login</h1></a>
+           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
         </div>
-        <div class="col">
+        <div class="col-md-3">
 
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-primary"><h1>Cadastre-se</h1></a>
+           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
         </div>
       </div>
 
    </div>
-</body>
+   </header>
+
+   <body>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br> <center><h1>Sistema de Saúde</h1></center>
+   </body>
+
 </html>

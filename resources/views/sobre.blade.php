@@ -9,18 +9,49 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
     <style>
-    <body>
-    {
+    body{
         font-family: 'Blinker', sans-serif;
+        background-color: #006400;
+        color: #F0F8FF;
     }
+    header{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
-<body>
-    <h1>Sobre</h1>
 
-    <div class="row">
-     Digite seu texto aqui.Digite seu texto aqui.
-     Digite seu texto aqui.Digite seu texto aqui.
+<header> 
+   <div class="container">
+        
+      <div class="row">
+        <div class="col-md-5 mt-2">
+        <h1>Sistema de Saúde</h1>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
+        </div>
+        <div class="col-md-3">
+
+           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
+        </div>
+      </div>
+
+   </div>
+   </header>
+
+<body>
+<br>
+<center><h1>Sobre</h1></center>
+
+    <div class="row mt-2">
+      <center><h3>Projeto desenvolvido pelos alunos do Curso de Informática 3 do IFMA - Campus Avançado de Porto Franco MA</h3></center>
     </div>
 </body>
+
 </html>

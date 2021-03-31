@@ -9,12 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Blinker&display=swap" rel="stylesheet">
     <style>
-    <body>
-    {
+    body{
         font-family: 'Blinker', sans-serif;
+        background-color: #006400;
+        color: #F0F8FF;
     }
+    header{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
+      footer{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
+
+<header> 
+   <div class="container">
+        
+      <div class="row">
+        <div class="col-md-5 mt-2">
+        <h1>Sistema de Saúde</h1>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
+        </div>
+        <div class="col-md-2">
+
+           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
+        </div>
+        <div class="col-md-3">
+
+           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
+        </div>
+      </div>
+
+   </div>
+   </header>
+
 <body>
     <div class="container">
     
@@ -30,60 +64,60 @@
      <form method="POST" action="{{ route('carregarCadastro') }}">
        @csrf
         <div class="mb-3">
-         <label for="nome" class="form-label"><h1>Nome da Instituição</h1></label>
+         <label for="nome" class="form-label">Nome da Instituição</label>
          <input type="text" class="form-control" id="nome" name="nome">
         </div>
         <div class="mb-3">
-         <label for="cnpj" class="form-label"><h1>CNPJ</h1></label>
+         <label for="cnpj" class="form-label">CNPJ</label>
          <input type="text" class="form-control" id="cnpj" name="cnpj">
         </div>
         <div class="mb-3">
-         <label for="bairro" class="form-label"><h1>Bairro</h1></label>
+         <label for="bairro" class="form-label">Bairro</label>
          <input type="text" class="form-control" id="bairro" name="bairro">
         </div>
         <div class="mb-3">
-         <label for="rua" class="form-label"><h1>Rua</h1></label>
+         <label for="rua" class="form-label">Rua</label>
          <input type="text" class="form-control" id="rua" name="rua">
         </div>
         <div class="mb-3">
-         <label for="numero" class="form-label"><h1>Número</h1></label>
+         <label for="numero" class="form-label">Número</label>
          <input type="text" class="form-control" id="numero" name="numero">
         </div>
         <div class="mb-3">
-         <label for="complemento" class="form-label"><h1>Complemento</h1></label>
+         <label for="complemento" class="form-label">Complemento</label>
          <input type="text" class="form-control" id="complemento" name="complemento">
         </div>
         <div class="mb-3">
-         <label for="instagram" class="form-label"><h1>Instagram</h1></label>
+         <label for="instagram" class="form-label">Instagram</label>
          <input type="text" class="form-control" id="instagram" name="instagram">
         </div>
         <div class="mb-3">
-         <label for="facebook" class="form-label"><h1>Facebook</h1></label>
+         <label for="facebook" class="form-label">Facebook</label>
          <input type="text" class="form-control" id="facebook" name="facebook">
         </div>
         <div class="mb-3">
-         <label for="email" class="form-label"><h1>E-mail</h1></label>
+         <label for="email" class="form-label">E-mail</label>
          <input type="text" class="form-control" id="email" name="email">
         </div>
         <div class="mb-3">
-         <label for="twitter" class="form-label"><h1>Twitter</h1></label>
+         <label for="twitter" class="form-label">Twitter</label>
          <input type="text" class="form-control" id="twitter" name="twitter">
         </div>
         <div class="mb-3">
-         <label for="senha" class="form-label"><h1>Senha</h1></label>
+         <label for="senha" class="form-label">Senha</label>
          <input type="password" class="form-control" id="senha" name="senha">
         </div>
         <div class="mb-3">
-         <label for="confirmarsenha" class="form-label"><h1>Confirmar senha</h1></label>
+         <label for="confirmarsenha" class="form-label">Confirmar senha</label>
          <input type="password" class="form-control" id="confirmarsenha" name="confirmarsenha">
         </div>
         <div class="row">
-          <button type="submit" class="btn btn-primary">Concluir</button>
+          <button type="submit" class="btn btn-success">Concluir</button>
         </div>
        </form>
        <div class="row mt-2">
 
-         <a  href="{{ route('carregarLogin') }}" class="btn btn-primary">Já possui uma conta? Entrar</a>
+         <a  href="{{ route('carregarLogin') }}" class="btn btn-success">Já possui uma conta? Entrar</a>
        </div>
        <div class="mb-3 form-check">
          <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -97,4 +131,11 @@
 
     </div>
 </body>
+
+<div class="row mt-4">
+   <footer>
+   <center>Todos os direitos reservados - Izis Carolaine e Guilherme Cavalcante - 2021</center>
+   </footer>
+   </div>
+   
 </html>
