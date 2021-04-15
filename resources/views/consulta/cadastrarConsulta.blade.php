@@ -36,14 +36,6 @@
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
         </div>
-        <div class="col-md-2">
-
-           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
-        </div>
-        <div class="col-md-3">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
-        </div>
       </div>
 
    </div>
@@ -57,28 +49,12 @@
      </div>
 
      <div class="row mt-3">
-     <h1>Cadastre-se</h1>
+     <h1>Cadastrar Consulta</h1>
      </div>
 
      <div class="row">
-     <form method="POST" action="{{ route('carregarCadastro') }}">
+     <form method="POST" action="{{ route('consulta') }}">
        @csrf
-        <div class="mb-3">
-         <label for="nome" class="form-label">Nome da Instituição</label>
-         <input type="text" class="form-control" id="nome" name="nome">
-        </div>
-        <div class="mb-3">
-         <label for="rua" class="form-label">Rua</label>
-         <input type="text" class="form-control" id="rua" name="rua">
-        </div>
-        <div class="mb-3">
-         <label for="bairro" class="form-label">Bairro</label>
-         <input type="text" class="form-control" id="bairro" name="bairro">
-        </div>
-        <div class="mb-3">
-         <label for="complemento" class="form-label">Complemento</label>
-         <input type="text" class="form-control" id="complemento" name="complemento">
-        </div>
         <div class="mb-3">
          <label for="hora_inicial" class="form-label">Horário Inicial</label>
          <input type="text" class="form-control" id="hora_inicial" name="hora_inicial">
@@ -88,22 +64,17 @@
          <input type="text" class="form-control" id="hora_termino" name="hora_termino">
         </div>
         <div class="mb-3">
-         <label for="tipo" class="form-label">Tipo</label>
-         <input type="text" class="form-control" id="tipo" name="tipo">
+         <label for="data" class="form-label">Data</label>
+         <input type="text" class="form-control" id="data" name="data">
         </div>
-       </form>
-       <div class="row mt-2">
+        <div class="mb-3">
+         <label for="especialidade" class="form-label">Especialidade</label>
+         <input type="text" class="form-control" id="especialidade" name="especialidade">
+        </div>
+        <div class="row mt-2">
 
-         <a  href="{{ route('carregarLogin') }}" class="btn btn-success">Salva</a>
-       </div>
-       <div class="mb-3 form-check">
-         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-         <label class="form-check-label" for="exampleCheck1">Concordo com os termos de uso</label>
-       </div>
-       <div class="mb-3 form-check">
-         <input type="checkbox" class="form-check-input" id="exampleCheck1">
-         <label class="form-check-label" for="exampleCheck1">Desejo receber notificação</label>
-       </div>
+          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
+        </div>
      </div>
 
     </div>

@@ -25,20 +25,12 @@
    <div class="container">
         
       <div class="row ">
-        <div class="col-md-5 mt-2">
+        <div class="col-md-10 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
         <div class="col-md-2">
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
-        </div>
-        <div class="col-md-2">
-
-           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
-        </div>
-        <div class="col-md-3">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
         </div>
       </div>
 
@@ -46,14 +38,48 @@
    </header>
 
    <body>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br>
-     <br> <center><h1>Sistema de Saúde</h1></center>
+    
+   <div class="container">
+      <div class="row">
+      <div class="col-md-4">
+      <center><h2>Principais Consultas</h2></center>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-success">An item</li> <br>
+        <li class="list-group-item list-group-item-success">A second item</li> <br>
+        <li class="list-group-item list-group-item-success">A third item</li> <br>
+        <li class="list-group-item list-group-item-success">A fourth item</li> <br>
+        <li class="list-group-item list-group-item-success">And a fifth one</li> <br>
+      </ul>
+      <div class="row mt-2">
+
+         <a  href="{{ route('listaMedico') }}" class="btn btn-success"><h1>Ver mais informações sobre médicos</h1></a>
+      </div>
+      <div class="row mt-2">
+
+         <a  href="{{ route('listaCentro') }}" class="btn btn-success"><h1>Ver mais informações sobre Centros de Saúde</h1></a>
+      </div>
+      </div>
+
+      <div class="col-md-4">
+       <center><h2>Importante</h2></center> 
+       <center><h3>Projeto desenvolvido pelos alunos do Curso de Informática 3 do IFMA - Campus Avançado de Porto Franco MA</h3></center>
+      </div>
+
+      <div class="col-md-4">
+      <center><h2>Plantão</h2></center>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item list-group-item-success">An item</li> <br>
+        <li class="list-group-item list-group-item-success">A second item</li> <br>
+        <li class="list-group-item list-group-item-success">A third item</li> <br>
+        <li class="list-group-item list-group-item-success">A fourth item</li> <br>
+        <li class="list-group-item list-group-item-success">And a fifth one</li> <br>
+      </ul>
+      </div>
+
+      </div>
+
+</div>
+
    </body>
 
 </html>

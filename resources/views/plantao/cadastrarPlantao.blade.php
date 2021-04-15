@@ -18,6 +18,10 @@
          background-color: #32CD32;
          color: #F0F8FF;
       }
+      footer{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
 
@@ -32,14 +36,6 @@
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
         </div>
-        <div class="col-md-2">
-
-           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
-        </div>
-        <div class="col-md-3">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
-        </div>
       </div>
 
    </div>
@@ -47,22 +43,39 @@
 
 <body>
     <div class="container">
+    
+     <div class="row">
 
-    <center><h1>Recupere sua senha</h1></center>
+     </div>
 
-    <div class="row">
-    <form method="POST" action="{{ route('carregarRecuperação') }}">
+     <div class="row mt-3">
+     <h1>Cadastrar Plantão</h1>
+     </div>
+
+     <div class="row">
+     <form method="POST" action="{{ route('plantao') }}">
        @csrf
         <div class="mb-3">
-         <label for="emailr" class="form-label"><h1>E-mail</h1></label>
-         <input type="text" class="form-control" id="emailr" name="emailr">
+         <label for="hora_inicial" class="form-label">Horário Inicial</label>
+         <input type="text" class="form-control" id="hora_inicial" name="hora_inicial">
         </div>
-        <div class="row">
-          <button type="submit" class="btn btn-success">Enviar</button>
+        <div class="mb-3">
+         <label for="hora_termino" class="form-label">Horário de termino</label>
+         <input type="text" class="form-control" id="hora_termino" name="hora_termino">
         </div>
-       </form>
-       </div>
-    
+        <div class="row mt-2">
+
+          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
+        </div>
+     </div>
+
     </div>
 </body>
+
+<div class="row mt-4">
+   <footer>
+   <center>Todos os direitos reservados - Izis Carolaine e Guilherme Cavalcante - 2021</center>
+   </footer>
+   </div>
+   
 </html>

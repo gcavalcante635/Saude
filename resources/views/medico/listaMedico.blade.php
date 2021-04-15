@@ -13,61 +13,54 @@
         font-family: 'Blinker', sans-serif;
         background-color: #006400;
         color: #F0F8FF;
-    }
-    header{
+      }
+      header{
          background-color: #32CD32;
          color: #F0F8FF;
       }
     </style>
 </head>
 
-<header> 
+   <header> 
    <div class="container">
         
-      <div class="row">
-        <div class="col-md-6 mt-2">
+      <div class="row ">
+        <div class="col-md-10 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
         <div class="col-md-2">
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
         </div>
-        <div class="col-md-4">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
-        </div>
       </div>
 
    </div>
    </header>
 
-<body>
-
-     <div class="container">
-      
-    <div class="row">
-      
-    </div>
-
-    <div class="row mt-3">
-    <form method="POST" action="{{ route('carregarLogin') }}">
-       @csrf
-        <div class="mb-3">
-         <label for="nome" class="form-label"><h1>Nome da Instituição</h1></label>
-         <input type="text" class="form-control" id="nome" name="nome">
-        </div>
-        <div class="row mt-2">
-
-           <a  href="{{ route('telaAdministrador') }}" class="btn btn-success">Entrar</a>
-        </div>
-       
-       </form>
-       <div class="row mt-2">
-       <a  href="{{ route('carregarCadastro') }}" class="btn btn-success">Não possui uma conta? Cadastre-se</a>
-       </div>
-    </div>
-    
-    </div>
-</body>
+   <body>
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CRM</th>
+      <th scope="col">Especialidade</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">3241341</th>
+      <td>Orlando</td>
+      <td>5465464</td>
+      <td>Dermatologista</td>
+      <td>
+      <a href="{{ route ('editarMedico',) }}">Editar</a>
+      <a href="{{ route ('carregarSobre', ) }}">Excluir</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+   </body>
 
 </html>

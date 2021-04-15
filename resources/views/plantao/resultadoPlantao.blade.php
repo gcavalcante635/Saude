@@ -13,28 +13,24 @@
         font-family: 'Blinker', sans-serif;
         background-color: #006400;
         color: #F0F8FF;
-    }
-    header{
+      }
+      header{
          background-color: #32CD32;
          color: #F0F8FF;
       }
     </style>
 </head>
 
-<header> 
+   <header> 
    <div class="container">
         
-      <div class="row">
-        <div class="col-md-6 mt-2">
+      <div class="row ">
+        <div class="col-md-10 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
         <div class="col-md-2">
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
-        </div>
-        <div class="col-md-4">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
         </div>
       </div>
 
@@ -42,32 +38,19 @@
    </header>
 
 <body>
+<div class="row">
+   <h1> Cadastro da Plantao efetuado com sucesso! </h1>
+   </div>
 
-     <div class="container">
-      
-    <div class="row">
-      
-    </div>
+   <div class="row mt-3">
+   <div class="col-md-2">Horário Inicial</div>
+   <div class="col-md-2">Orlando</div>
+   </div>
 
-    <div class="row mt-3">
-    <form method="POST" action="{{ route('carregarLogin') }}">
-       @csrf
-        <div class="mb-3">
-         <label for="nome" class="form-label"><h1>Nome da Instituição</h1></label>
-         <input type="text" class="form-control" id="nome" name="nome">
-        </div>
-        <div class="row mt-2">
+   <div class="row mt-2">
+   <div class="col-md-2">Horário de termino</div>
+   <div class="col-md-2">4335425</div>
+   </div>
 
-           <a  href="{{ route('telaAdministrador') }}" class="btn btn-success">Entrar</a>
-        </div>
-       
-       </form>
-       <div class="row mt-2">
-       <a  href="{{ route('carregarCadastro') }}" class="btn btn-success">Não possui uma conta? Cadastre-se</a>
-       </div>
-    </div>
-    
-    </div>
 </body>
-
 </html>

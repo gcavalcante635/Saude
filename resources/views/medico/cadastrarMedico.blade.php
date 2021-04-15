@@ -18,6 +18,10 @@
          background-color: #32CD32;
          color: #F0F8FF;
       }
+      footer{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
 
@@ -25,16 +29,12 @@
    <div class="container">
         
       <div class="row">
-        <div class="col-md-6 mt-2">
+        <div class="col-md-5 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
         <div class="col-md-2">
 
            <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
-        </div>
-        <div class="col-md-4">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
         </div>
       </div>
 
@@ -42,32 +42,44 @@
    </header>
 
 <body>
+    <div class="container">
+    
+     <div class="row">
 
-     <div class="container">
-      
-    <div class="row">
-      
-    </div>
+     </div>
 
-    <div class="row mt-3">
-    <form method="POST" action="{{ route('carregarLogin') }}">
+     <div class="row mt-3">
+     <h1>Cadastrar Médico</h1>
+     </div>
+
+     <div class="row">
+     <form method="POST" action="{{ route('medico') }}">
        @csrf
         <div class="mb-3">
-         <label for="nome" class="form-label"><h1>Nome da Instituição</h1></label>
+         <label for="nome" class="form-label">Nome Completo</label>
          <input type="text" class="form-control" id="nome" name="nome">
+        </div>
+        <div class="mb-3">
+         <label for="crm" class="form-label">CRM</label>
+         <input type="text" class="form-control" id="crm" name="crm">
+        </div>
+        <div class="mb-3">
+         <label for="especialidade" class="form-label">Especialidade</label>
+         <input type="text" class="form-control" id="especialidade" name="especialidade">
         </div>
         <div class="row mt-2">
 
-           <a  href="{{ route('telaAdministrador') }}" class="btn btn-success">Entrar</a>
+          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
         </div>
-       
-       </form>
-       <div class="row mt-2">
-       <a  href="{{ route('carregarCadastro') }}" class="btn btn-success">Não possui uma conta? Cadastre-se</a>
-       </div>
-    </div>
-    
+     </div>
+
     </div>
 </body>
 
+<div class="row mt-4">
+   <footer>
+   <center>Todos os direitos reservados - Izis Carolaine e Guilherme Cavalcante - 2021</center>
+   </footer>
+   </div>
+   
 </html>

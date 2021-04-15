@@ -26,4 +26,8 @@ class SaudeController extends Controller
     {
         return view('recuperarSenha');
     }
+    public function administrador(Request $request)
+    {
+        return view('administrador');
+    }
 }

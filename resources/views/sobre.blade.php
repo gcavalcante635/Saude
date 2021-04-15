@@ -28,18 +28,6 @@
         <div class="col-md-5 mt-2">
         <h1>Sistema de Saúde</h1>
         </div>
-        <div class="col-md-2">
-
-           <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Sobre</h1></a>
-        </div>
-        <div class="col-md-2">
-
-           <a  href="{{ route('carregarLogin') }}" class="btn btn-success"><h1>Login</h1></a>
-        </div>
-        <div class="col-md-3">
-
-           <a  href="{{ route('carregarCadastro') }}" class="btn btn-success"><h1>Cadastre-se</h1></a>
-        </div>
       </div>
 
    </div>
