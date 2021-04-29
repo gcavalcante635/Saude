@@ -18,6 +18,10 @@
          background-color: #32CD32;
          color: #F0F8FF;
       }
+      footer{
+         background-color: #32CD32;
+         color: #F0F8FF;
+      }
     </style>
 </head>
 
@@ -40,7 +44,7 @@
    <body>
     
    <div class="container">
-      <div class="row">
+      <div class="row mt-2">
       <div class="col-md-4">
       <center><h2>Principais Consultas</h2></center>
       <ul class="list-group list-group-flush">
@@ -50,21 +54,11 @@
         <li class="list-group-item list-group-item-success">A fourth item</li> <br>
         <li class="list-group-item list-group-item-success">And a fifth one</li> <br>
       </ul>
-      <div class="row mt-2">
-
-         <a  href="{{ route('listaMedico') }}" class="btn btn-success"><h1>Ver mais informações sobre médicos</h1></a>
       </div>
-      <div class="row mt-2">
-
-         <a  href="{{ route('listaCentro') }}" class="btn btn-success"><h1>Ver mais informações sobre Centros de Saúde</h1></a>
-      </div>
-      </div>
-
       <div class="col-md-4">
        <center><h2>Importante</h2></center> 
        <center><h3>Projeto desenvolvido pelos alunos do Curso de Informática 3 do IFMA - Campus Avançado de Porto Franco MA</h3></center>
-      </div>
-
+       </div>
       <div class="col-md-4">
       <center><h2>Plantão</h2></center>
       <ul class="list-group list-group-flush">
@@ -75,11 +69,29 @@
         <li class="list-group-item list-group-item-success">And a fifth one</li> <br>
       </ul>
       </div>
+</div>
 
+
+      <div class="row mt-2">
+      <div class="col-md-6">
+
+         <a  href="{{ route('listaMedico') }}" class="btn btn-success"><h1>Ver mais informações sobre médicos</h1></a>
       </div>
+      <div class="col-md-6">
+
+      <a  href="{{ route('listaCentro') }}" class="btn btn-success"><h1>Ver mais informações sobre Centros de Saúde</h1></a>
+      </div>
+      </div>
+
+      
 
 </div>
 
    </body>
+   <div class="row mt-4">
+   <footer>
+   <center>Todos os direitos reservados - Izis Carolaine e Guilherme Cavalcante - 2021</center>
+   </footer>
+   </div>
 
 </html>

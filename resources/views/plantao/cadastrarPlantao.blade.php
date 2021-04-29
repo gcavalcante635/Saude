@@ -53,8 +53,14 @@
      </div>
 
      <div class="row">
-     <form method="POST" action="{{ route('plantao') }}">
+     <form method="POST" action="{{ route('resultadoPlantao') }}">
        @csrf
+       <select class="form-control form-control-lg col-md-12 mt-1" name="centro">
+          <option selected disabled value>Selecione o centro de saúde</option>
+           @foreach ($centros as $centro)
+           <option value="{{$centro->id}}">{{$centro->nome}}</option> 
+           @endforeach 
+           </select>
         <div class="mb-3">
          <label for="hora_inicial" class="form-label">Horário Inicial</label>
          <input type="text" class="form-control" id="hora_inicial" name="hora_inicial">
@@ -63,9 +69,8 @@
          <label for="hora_termino" class="form-label">Horário de termino</label>
          <input type="text" class="form-control" id="hora_termino" name="hora_termino">
         </div>
-        <div class="row mt-2">
-
-          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
      </div>
 

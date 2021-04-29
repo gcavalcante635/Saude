@@ -53,8 +53,20 @@
      </div>
 
      <div class="row">
-     <form method="POST" action="{{ route('medico') }}">
+     <form method="POST" action="{{ route('resultadoMedico') }}">
        @csrf
+       <select class="form-control form-control-lg col-md-12 mt-1" name="plantao">
+          <option selected disabled value>Selecione o plantao</option>
+           @foreach ($plantoes as $plantao)
+           <option value="{{$plantao->id}}">{{$plantao->hora_inicial}}</option> 
+           @endforeach 
+           </select>
+       <select class="form-control form-control-lg col-md-12 mt-1" name="consulta">
+          <option selected disabled value>Selecione o centro de saúde</option>
+           @foreach ($consultas as $consulta)
+           <option value="{{$consulta->id}}">{{$consulta->hora_inicial}}</option> 
+           @endforeach 
+           </select>
         <div class="mb-3">
          <label for="nome" class="form-label">Nome Completo</label>
          <input type="text" class="form-control" id="nome" name="nome">
@@ -67,9 +79,8 @@
          <label for="especialidade" class="form-label">Especialidade</label>
          <input type="text" class="form-control" id="especialidade" name="especialidade">
         </div>
-        <div class="row mt-2">
-
-          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
      </div>
 

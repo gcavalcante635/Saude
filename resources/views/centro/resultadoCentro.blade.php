@@ -37,27 +37,45 @@
    </div>
    </header>
 
-   <body>
-   <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Nome</th>
-      <th scope="col">CRM</th>
-      <th scope="col">Especialidade</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($medicos as $medico)
-    <tr>
-      <th scope="row">{{$medico->id}}</th>
-      <td>{{$medico->nome}}</td>
-      <td>{{$medico->crm}}</td>
-      <td>{{$medico->especialidade}}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-   </body>
+<body>
+<div class="row">
+   <h1> Cadastro de Centro Saúde efetuado com sucesso! </h1>
+   </div>
 
+   <div class="row mt-3">
+   <div class="col-md-2">Nome</div>
+   <div class="col-md-2">{{ $centro->nome}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Bairro</div>
+   <div class="col-md-2">{{ $centro->bairro}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Rua</div>
+   <div class="col-md-2">{{ $centro->rua}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Complemento</div>
+   <div class="col-md-2">{{ $centro->complemento}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Horário Inicial</div>
+   <div class="col-md-2">{{ $centro->hora_inicial}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Horário de termino</div>
+   <div class="col-md-2">{{ $centro->hora_termino}}</div>
+   </div>
+
+   <div class="row mt-2">
+   <div class="col-md-2">Tipo</div>
+   <div class="col-md-2">{{ $centro->tipo}}</div>
+   </div>
+
+</body>
 </html>

@@ -61,7 +61,7 @@
      </div>
 
      <div class="row">
-     <form method="POST" action="{{ route('carregarCadastro') }}">
+     <form method="POST" action="{{ route('resultadoCentro') }}">
        @csrf
         <div class="mb-3">
          <label for="nome" class="form-label">Nome da Instituição</label>
@@ -91,11 +91,12 @@
          <label for="tipo" class="form-label">Tipo</label>
          <input type="text" class="form-control" id="tipo" name="tipo">
         </div>
+        <div class="row">
+          <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
        </form>
-       <div class="row mt-2">
-
-         <a  href="{{ route('carregarLogin') }}" class="btn btn-success">Salva</a>
        </div>
+
        <div class="mb-3 form-check">
          <input type="checkbox" class="form-check-input" id="exampleCheck1">
          <label class="form-check-label" for="exampleCheck1">Concordo com os termos de uso</label>

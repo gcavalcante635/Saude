@@ -53,23 +53,23 @@
      </div>
 
      <div class="row">
-     <form method="POST" action="{{ route('editarMedico') }}">
+     <form method="POST" action="{{ route('edicaoMedico') }}">
        @csrf
+       <input type="hidden" value="{{$medico->id}}" name="id">
         <div class="mb-3">
          <label for="nome" class="form-label">Nome Completo</label>
-         <input type="text" class="form-control" id="nome" name="nome" value= Orlando>
+         <input type="text" class="form-control" id="nome" name="nome" value="{{$medico->nome}}">
         </div>
         <div class="mb-3">
          <label for="crm" class="form-label">CRM</label>
-         <input type="text" class="form-control" id="crm" name="crm" value= 312312>
+         <input type="text" class="form-control" id="crm" name="crm" value="{{$medico->crm}}">
         </div>
         <div class="mb-3">
          <label for="especialidade" class="form-label">Especialidade</label>
-         <input type="text" class="form-control" id="especialidade" name="especialidade" value= Cardiologista>
+         <input type="text" class="form-control" id="especialidade" name="especialidade" value="{{$medico->especialidade}}">
         </div>
         <div class="row mt-2">
-
-          <a  href="{{ route('carregarSobre') }}" class="btn btn-success"><h1>Salvar</h1></a>
+         <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
      </div>
 

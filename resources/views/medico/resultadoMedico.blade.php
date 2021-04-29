@@ -44,17 +44,17 @@
 
    <div class="row mt-3">
    <div class="col-md-2">Nome</div>
-   <div class="col-md-2">Orlando</div>
+   <div class="col-md-2">{{ $medico->nome}}</div>
    </div>
 
    <div class="row mt-2">
    <div class="col-md-2">CRM</div>
-   <div class="col-md-2">4335425</div>
+   <div class="col-md-2">{{ $medico->crm}}</div>
    </div>
 
    <div class="row mt-2">
    <div class="col-md-2">Especialidade</div>
-   <div class="col-md-2">Dermatologista</div>
+   <div class="col-md-2">{{ $medico->especialidade}}</div>
    </div>
 
 </body>

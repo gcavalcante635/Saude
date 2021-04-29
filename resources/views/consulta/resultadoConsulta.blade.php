@@ -44,23 +44,22 @@
 
    <div class="row mt-3">
    <div class="col-md-2">Horário Inicial</div>
-   <div class="col-md-2">Orlando</div>
+   <div class="col-md-2">{{ $consulta->hora_inicial}}</div>
    </div>
 
    <div class="row mt-2">
    <div class="col-md-2">Horário de termino</div>
-   <div class="col-md-2">4335425</div>
+   <div class="col-md-2">{{ $consulta->hora_termino}}</div>
    </div>
 
-   
    <div class="row mt-2">
    <div class="col-md-2">Data</div>
-   <div class="col-md-2">4335425</div>
+   <div class="col-md-2">{{ $consulta->data}}</div>
    </div>
 
    <div class="row mt-2">
    <div class="col-md-2">Especialidade</div>
-   <div class="col-md-2">Dermatologista</div>
+   <div class="col-md-2">{{ $consulta->especialidade}}</div>
    </div>
 
 </body>

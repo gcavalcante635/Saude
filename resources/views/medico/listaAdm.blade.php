@@ -45,6 +45,7 @@
       <th scope="col">Nome</th>
       <th scope="col">CRM</th>
       <th scope="col">Especialidade</th>
+      <th scope="col">Ações</th>
     </tr>
   </thead>
   <tbody>
@@ -54,6 +55,10 @@
       <td>{{$medico->nome}}</td>
       <td>{{$medico->crm}}</td>
       <td>{{$medico->especialidade}}</td>
+      <td>
+      <a href="{{ route ('editarMedico',$medico->id) }}">Editar</a>
+      <a href="{{ route ('excluirMedico',$medico->id ) }}">Excluir</a>
+      </td>
     </tr>
     @endforeach
   </tbody>

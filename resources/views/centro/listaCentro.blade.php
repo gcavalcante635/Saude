@@ -49,25 +49,21 @@
       <th scope="col">Horário Inicial</th>
       <th scope="col">Horário de Termino</th>
       <th scope="col">Tipo</th>
-      <th scope="col">Ações</th>
-
     </tr>
   </thead>
   <tbody>
+  @foreach ($centros as $centro)
     <tr>
-      <th scope="row">35245243</th>
-      <td>Hospital Maternidade</td>
-      <td>Alfredo</td>
-      <td>Vila nova</td>
-      <td>perto da loja 10</td>
-      <td>12:23</td>
-      <td>16:30</td>
-      <td>Hospital</td>
-      <td>
-      <a href="{{ route ('editarCentro',) }}">Editar</a>
-      <a href="{{ route ('carregarSobre', ) }}">Excluir</a>
-      </td>
+      <th scope="row">{{$centro->id}}</th>
+      <td>{{$centro->nome}} </td>
+      <td>{{$centro->rua}}</td>
+      <td>{{$centro->bairro}}</td>
+      <td>{{$centro->complemento}}</td>
+      <td>{{$centro->hora_inicial}}</td>
+      <td>{{$centro->hora_termino}}</td>
+      <td>{{$centro->tipo}}</td>
     </tr>
+    @endforeach
   </tbody>
 </table>
    </body>
